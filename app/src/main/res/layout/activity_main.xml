@@ -192,16 +192,6 @@
         android:onClick="send" />
 
     <Button
-        android:text="Emergency Stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/estop"
-        android:layout_below="@+id/stop"
-        android:layout_alignLeft="@+id/stop"
-        android:layout_alignStart="@+id/stop"
-        android:onClick="estop" />
-
-    <Button
         android:text="Set zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -232,4 +222,14 @@
         android:layout_alignLeft="@+id/kdyaw"
         android:layout_alignStart="@+id/kdyaw"
         android:onClick="reset" />
+
+    <Button
+        android:text="Emergency Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/estop"
+        android:onClick="estop"
+        android:layout_below="@+id/stop"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

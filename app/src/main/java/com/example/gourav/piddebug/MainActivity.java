@@ -46,19 +46,19 @@
         public void thrust(float thrust){
             int th = (int)thrust;
             String s= Integer.toString( th ) ;
-            String http = "http://192.168.43.1:8080/000" ;
+            String http = "http://192.168.43.1:8080?command= 000" ;
             int n = s.length();
             if( n == 1 ){
-                http = "http://192.168.43.1:8080/000" ;
+                http = "http://192.168.43.1:8080?command= 000" ;
             }
             if( n == 2 ){
-                http = "http://192.168.43.1:8080/00" ;
+                http = "http://192.168.43.1:8080?command= 00" ;
             }
             if( n == 3 ){
-                http = "http://192.168.43.1:8080/0" ;
+                http = "http://192.168.43.1:8080?command= 0" ;
             }
             if( n == 4 ){
-                http = "http://192.168.43.1:8080/" ;
+                http = "http://192.168.43.1:8080?command= " ;
             }
             String url = http + s ;
             WebView browser = (WebView)findViewById(R.id.webview);
@@ -79,28 +79,28 @@
         browser.getSettings().setLoadsImagesAutomatically(true);
         browser.getSettings().setJavaScriptEnabled(true);
         browser.setScrollBarStyle(view.SCROLLBARS_INSIDE_OVERLAY);
-        browser.loadUrl("http://192.168.43.1:8080/start");
+        browser.loadUrl("http://192.168.43.1:8080/?command=start");
     }
         public void stop(View view){
             WebView browser = (WebView)findViewById(R.id.webview);
             browser.getSettings().setLoadsImagesAutomatically(true);
             browser.getSettings().setJavaScriptEnabled(true);
             browser.setScrollBarStyle(view.SCROLLBARS_INSIDE_OVERLAY);
-            browser.loadUrl("http://192.168.43.1:8080/stop");
+            browser.loadUrl("http://192.168.43.1:8080/?command=sstop");
         }
         public void estop(View view){
             WebView browser = (WebView)findViewById(R.id.webview);
             browser.getSettings().setLoadsImagesAutomatically(true);
             browser.getSettings().setJavaScriptEnabled(true);
             browser.setScrollBarStyle(view.SCROLLBARS_INSIDE_OVERLAY);
-            browser.loadUrl("http://192.168.43.1:8080/estop");
+            browser.loadUrl("http://192.168.43.1:8080/?command=estop");
         }
         public void zero(View view){
             WebView browser = (WebView)findViewById(R.id.webview);
             browser.getSettings().setLoadsImagesAutomatically(true);
             browser.getSettings().setJavaScriptEnabled(true);
             browser.setScrollBarStyle(view.SCROLLBARS_INSIDE_OVERLAY);
-            browser.loadUrl("http://192.168.43.1:8080/zero");
+            browser.loadUrl("http://192.168.43.1:8080/?command=szero");
         }
         public void send(View view){
             ekproll = (EditText)findViewById(R.id.kproll);
@@ -127,6 +127,6 @@
             browser.getSettings().setLoadsImagesAutomatically(true);
             browser.getSettings().setJavaScriptEnabled(true);
             browser.setScrollBarStyle(view.SCROLLBARS_INSIDE_OVERLAY);
-            browser.loadUrl("http://192.168.43.1:8080/reset");
+            browser.loadUrl("http://192.168.43.1:8080/?command=reset");
         }
 }
